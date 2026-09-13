@@ -37,3 +37,18 @@
 ​What I Learnt:
 ​Solved false-positive detections by masking dark spot queries strictly inside the verified road region using cv2.bitwise_and.
 ​Filtered detected contours based on minimum and maximum contour area thresholds (cv2.contourArea) to filter out noise while keeping actual hazards
+### 📅 Date: September 13, 2026
+
+#### 📌 Task 5 (Bonus): Introduction to ROS 2 Node Architecture
+* *What I Did:*
+  * Created Python scripts in Task_5/ implementing core ROS 2 communication interfaces (rclpy).
+  * Implemented a *Publisher-Subscriber* model (topic_pub_sub.py) using std_msgs.msg.String for asynchronous status messaging over the ugv_status topic.
+  * Implemented a *Service-Client* model (service_server_client.py) using example_interfaces.srv.AddTwoInts for synchronous request/response computation.
+
+* *Problems Faced:*
+  * Understanding the conceptual difference between continuous streaming (Topics) vs. request-response calls (Services).
+  * Setting up node execution loops within Python client scripts.
+
+* *What I Learnt:*
+  * *Topics:* Best for continuous sensor telemetry and real-time streaming data.
+  * *Services:* Best for discrete actions, state triggers, and target computations that require explicit confirmation.
