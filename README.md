@@ -1,5 +1,5 @@
 # sanchitatripathy26IMSBIO025-
-## Task 1: Setup Repository & Command Line Navigation
+<h2 style="color: blue;">Task 1: Setup Repository &amp; Command Line Navigation</h2>
 ​What I Did:
 ​Created the official GitHub repository named sanchitatripathy26IMSBIO025.
 ​Configured local Git credentials, established tracking branches, and initialized directory structures for tasks (Task_1, Task_2, Task_3, Task_4).
@@ -12,7 +12,7 @@
 ​Learned how to set up Personal Access Tokens (PAT) and SSH keys for secure GitHub CLI operations.
 ​Mastered relative vs. absolute file paths in terminal navigation and script execution.
 ​📅 Date: September 12, 2026
-### Task 2: Lane Detection & Drivable Area Segmentation
+<h3 style="color: blue;">Task 2: Lane Detection &amp; Drivable Area Segmentation</h3>
 ​What I Did:
 ​Developed Task_2/main_task2.py using Python and OpenCV to isolate asphalt road boundaries and highlight the drivable region between them.
 ​Implemented HSV color segmentation (cv2.cvtColor, cv2.inRange) to filter out background elements and isolate the light-grey road surface.
@@ -24,8 +24,9 @@
 ​What I Learnt:
 ​Discovered that HSV (Hue, Saturation, Value) color space is far superior to standard RGB/BGR for separating road surfaces based on low saturation values.
 ​Applied morphological operators (cv2.MORPH_CLOSE, cv2.MORPH_OPEN) with elliptical kernels to smooth segment boundaries and bridge contour gaps.
-​📅 Date: September 13, 2026
-​#### Task 3: Obstacle & Pothole Detection
+
+
+<h4 style="color: blue;">Task 3: Obstacle &amp; Pothole Detection</h4>
 ​What I Did:
 ​Developed Task_3/main_task3.py to identify dark circular potholes and red obstacle blocks located on the drivable track.
 ​Implemented dual-range HSV thresholding to capture red obstacles across hue boundaries ([0, 10] and [160, 180]).
@@ -52,3 +53,23 @@
 * *What I Learnt:*
   * *Topics:* Best for continuous sensor telemetry and real-time streaming data.
   * *Services:* Best for discrete actions, state triggers, and target computations that require explicit confirmation.
+### 🗓️ Date: September 13, 2026
+
+📌 *Task 4: Autonomous Path Planning & Navigation System*
+
+* What I Did:
+
+    * Created a Python script (path_planning.py) inside Task_4/ to process track imagery, detect hazards, and plan safe navigation paths using OpenCV.
+    * Implemented road isolation using Contrast Limited Adaptive Histogram Equalization (CLAHE) and adaptive Otsu thresholding with morphological operations.
+    * Developed detection logic for dark ringed potholes (bounding red boxes) and obstacle markers (bounding yellow boxes) based on color segmentation in HSV space.
+    * Applied Distance Transform mapping (cv2.distanceTransform) on safe drivable road regions to dynamically calculate and render optimal high-clearance green navigation paths.
+
+* Problems Faced:
+
+    * Fine-tuning morphological filter parameters to isolate track contours without merging nearby obstacles into road boundaries.
+    * Filtering out false positives such as painted white text and start arrow indicators during hazard mask generation.
+
+* What I Learnt:
+
+    * Distance Transform Navigation: Understood how Euclidean distance field maps extract middle-ridge skeletons for safest trajectory generation.
+    * Safety Buffering: Practiced structural dilation to generate dynamic clearance zones around active track obstacles.
